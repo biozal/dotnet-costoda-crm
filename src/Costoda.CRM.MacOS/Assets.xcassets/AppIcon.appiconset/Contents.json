@@ -1,70 +1,68 @@
-﻿{
-  "images": [
+{
+  "images" : [
     {
+      "filename" : "crm-system-icon-16.png",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "16x16",
-      "filename": "Icon16.png"
+      "size" : "16x16"
     },
     {
+      "filename" : "crm-system-icon-32.png",
       "idiom" : "mac",
       "scale" : "2x",
-      "size" : "16x16",
-      "filename": "Icon32.png"
+      "size" : "16x16"
     },
     {
+      "filename" : "crm-system-icon-32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "32x32",
-      "filename": "Icon32.png"
+      "size" : "32x32"
     },
     {
+      "filename" : "crm-system-icon-64.png",
       "idiom" : "mac",
       "scale" : "2x",
-      "size" : "32x32",
-      "filename": "Icon64.png"
+      "size" : "32x32"
     },
     {
+      "filename" : "crm-system-icon-128.png",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "128x128",
-      "filename": "Icon128.png"
+      "size" : "128x128"
     },
     {
+      "filename" : "crm-system-icon-256.png",
       "idiom" : "mac",
       "scale" : "2x",
-      "size" : "128x128",
-      "filename": "Icon256.png"
+      "size" : "128x128"
     },
     {
+      "filename" : "crm-system-icon-256 1.png",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "256x256",
-      "filename": "Icon256.png"
+      "size" : "256x256"
     },
     {
+      "filename" : "crm-system-icon-512.png",
       "idiom" : "mac",
       "scale" : "2x",
-      "size" : "256x256",
-      "filename": "Icon512.png"
+      "size" : "256x256"
     },
     {
+      "filename" : "crm-system-icon-512 1.png",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "512x512",
-      "filename": "Icon512.png"
+      "size" : "512x512"
     },
     {
+      "filename" : "crm-system-icon-1024.png",
       "idiom" : "mac",
       "scale" : "2x",
-      "size" : "512x512",
-      "filename": "Icon1024.png"
+      "size" : "512x512"
     }
   ],
-  "info": {
-    "version": 1,
-    "author": "xcode"
-  },
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
 }
-
-

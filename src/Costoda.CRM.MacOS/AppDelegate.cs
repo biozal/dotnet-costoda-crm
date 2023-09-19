@@ -34,9 +34,10 @@ public class AppDelegate : NSApplicationDelegate {
 	    
 	    //bring up new window
 	    var startingSize = new CGSize(1024, 768);
-	    mainWindowController.Window.MinSize = startingSize; 
-	    
+		mainWindowController.Window.MinSize = startingSize;
+		mainWindowController.Window.Center();
 		mainWindowController.Window.MakeKeyAndOrderFront(null);
+
     }
 }
 

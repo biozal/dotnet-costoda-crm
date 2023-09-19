@@ -17,10 +17,14 @@
   <ItemGroup>
     <None Remove="ViewControllers\" />
     <None Remove="Models\" />
+    <None Remove="Controls\" />
+    <None Remove="WindowControllers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="WindowControllers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Costoda.CRM.Lib\Costoda.CRM.Lib.csproj" />
@@ -32,14 +36,20 @@
     <Compile Update="ViewControllers\AuthViewController.designer.cs">
       <DependentUpon>AuthViewController.cs</DependentUpon>
     </Compile>
-    <Compile Update="MainWindowController.designer.cs">
-      <DependentUpon>MainWindowController.cs</DependentUpon>
-    </Compile>
     <Compile Update="ViewControllers\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
     <Compile Update="ViewControllers\DetailViewController.designer.cs">
       <DependentUpon>DetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\AuthBackgroundView.designer.cs">
+      <DependentUpon>AuthBackgroundView.cs</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="WindowControllers\MainWindowController.designer.cs">
+      <DependentUpon>MainWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="WindowControllers\AuthenticationWindowController.designer.cs">
+      <DependentUpon>AuthenticationWindowController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

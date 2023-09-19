@@ -21,8 +21,14 @@ namespace Costoda.CRM.MacOS
 		[Outlet]
 		AppKit.NSTextField tfUsername { get; set; }
 
+		[Outlet]
+		AppKit.NSView vwBackground { get; set; }
+
 		[Action ("Login_Clicked:")]
 		partial void Login_Clicked (Foundation.NSObject sender);
+
+		[Action ("Logo_Clicked:")]
+		partial void Logo_Clicked (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -39,6 +45,11 @@ namespace Costoda.CRM.MacOS
 			if (tfUsername != null) {
 				tfUsername.Dispose ();
 				tfUsername = null;
+			}
+
+			if (vwBackground != null) {
+				vwBackground.Dispose ();
+				vwBackground = null;
 			}
 		}
 	}

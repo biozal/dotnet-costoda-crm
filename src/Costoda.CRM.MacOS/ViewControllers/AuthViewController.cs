@@ -11,6 +11,8 @@ namespace Costoda.CRM.MacOS
 		{
 
         }
+       
+
         public override void ViewWillAppear()
         {
             base.ViewWillAppear();
@@ -42,6 +44,13 @@ namespace Costoda.CRM.MacOS
                 tfUsername.Changed -= TextFieldValueChanged;
             }
 
+        }
+
+        //TODO REMOVE BEFORE GOING TO PRODUCTION
+        partial void Logo_Clicked(NSObject sender)
+        {
+            this.tfUsername.StringValue = "jane.doe@acme.com";
+            this.tfPassword.StringValue = "Password12";
         }
 
         partial void Login_Clicked(NSObject sender)
