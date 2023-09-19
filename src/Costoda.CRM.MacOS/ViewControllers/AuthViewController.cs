@@ -19,7 +19,11 @@ namespace Costoda.CRM.MacOS
             lblErrorMessage.Hidden = true;
 
             //setup events for text change to hide/show error message
-            tfUsername.Changed += TextFieldValueChanged;
+
+            if (tfUsername != null)
+            {
+                tfUsername.Changed += TextFieldValueChanged;
+            }
 
             var appDelegate = NSApplication.SharedApplication.Delegate as AppDelegate;
      
@@ -33,7 +37,10 @@ namespace Costoda.CRM.MacOS
         {
             base.ViewWillDisappear();
 
-            tfUsername.Changed -= TextFieldValueChanged;
+            if (tfUsername != null)
+            {
+                tfUsername.Changed -= TextFieldValueChanged;
+            }
 
         }
 
@@ -65,7 +72,7 @@ namespace Costoda.CRM.MacOS
             }
         }
 
-        private void TextFieldValueChanged(object sender, EventArgs e)
+        private void TextFieldValueChanged(object? sender, EventArgs e)
         {
             lblErrorMessage.Hidden = true;
             lblErrorMessage.StringValue = string.Empty;

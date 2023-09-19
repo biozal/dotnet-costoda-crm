@@ -1,5 +1,5 @@
 ﻿namespace Costoda.CRM.MacOS;
-using Costoda.CRM.Lib.Services;
+using Lib.Services;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,7 +25,18 @@ public class AppDelegate : NSApplicationDelegate {
 
     public void ShowMainWindowController()
     {
-		Console.WriteLine("Show Main View here");	
+		var storyboard = NSStoryboard.FromName("Main", null);
+		var mainWindowController = (NSWindowController)storyboard.InstantiateControllerWithIdentifier("MainWindowController");
+		
+	    //close current authentication window 
+		var currentActiveWindow = NSApplication.SharedApplication.KeyWindow;
+	    currentActiveWindow.Close();
+	    
+	    //bring up new window
+	    var startingSize = new CGSize(1024, 768);
+	    mainWindowController.Window.MinSize = startingSize; 
+	    
+		mainWindowController.Window.MakeKeyAndOrderFront(null);
     }
 }
 
