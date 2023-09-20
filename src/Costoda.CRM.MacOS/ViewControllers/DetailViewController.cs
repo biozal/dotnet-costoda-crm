@@ -5,12 +5,21 @@ using System;
 using Foundation;
 using AppKit;
 
+using Costoda.CRM.MacOS.Controls;
+using Costoda.CRM.MacOS.ViewControllers;
+
 namespace Costoda.CRM.MacOS
 {
-	public partial class DetailViewController : NSViewController
+	public partial class DetailViewController 
+		: NSViewController, IChangeViewByViewOptions
 	{
 		public DetailViewController (IntPtr handle) : base (handle)
 		{
+		}
+
+		public void ChangeView(ViewOptions viewOptions)
+		{
+			Console.WriteLine($"Detail View got view option: {viewOptions}");
 		}
 	}
 }

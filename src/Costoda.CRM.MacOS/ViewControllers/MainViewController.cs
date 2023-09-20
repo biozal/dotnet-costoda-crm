@@ -4,13 +4,20 @@ using System;
 
 using Foundation;
 using AppKit;
+using Costoda.CRM.MacOS.ViewControllers;
 
 namespace Costoda.CRM.MacOS
 {
-	public partial class MainViewController : NSViewController
+	public partial class MainViewController : 
+		NSViewController, IChangeViewByViewOptions
 	{
 		public MainViewController (IntPtr handle) : base (handle)
 		{
+		}
+
+		public void ChangeView(ViewOptions viewOptions)
+		{
+			Console.WriteLine($"Main View got viewOptions: {viewOptions}");
 		}
 	}
 }

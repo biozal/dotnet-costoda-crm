@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>Costoda.CRM.MacOS</string>
+	<string>DOTNET CRM</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.companyname.Costoda.CRM.MacOS</string>
 	<key>CFBundleShortVersionString</key>

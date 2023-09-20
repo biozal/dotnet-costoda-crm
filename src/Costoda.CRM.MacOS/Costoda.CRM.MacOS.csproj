@@ -21,7 +21,6 @@
     <None Remove="WindowControllers\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewControllers\" />
     <Folder Include="Models\" />
     <Folder Include="Controls\" />
     <Folder Include="WindowControllers\" />
@@ -51,5 +50,8 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="WindowControllers\AuthenticationWindowController.designer.cs">
       <DependentUpon>AuthenticationWindowController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Remove="ViewControllers\MainSplitViewController.xib" />
   </ItemGroup>
 </Project>
