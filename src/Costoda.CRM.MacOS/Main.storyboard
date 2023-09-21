@@ -808,20 +808,37 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="2Uv-EK-FTW" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" id="g8y-Mz-58V">
-                        <rect key="frame" x="0.0" y="0.0" width="220" height="36"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="equalCentering" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-Ra-mkn">
-                                <rect key="frame" x="0.0" y="20" width="220" height="16"/>
+                                <rect key="frame" x="0.0" y="20" width="220" height="160"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vXs-Qy-iRx">
-                                        <rect key="frame" x="-2" y="0.0" width="66" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Main View" id="LrW-IU-tWT">
-                                            <font key="font" usesAppearanceFont="YES"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
+                                    <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAP-zU-JDC">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="160"/>
+                                        <clipView key="contentView" id="kpD-7u-9PG">
+                                            <rect key="frame" x="1" y="1" width="218" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <collectionView id="tGK-g9-FBJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="158"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="vR7-kV-HMp">
+                                                        <size key="itemSize" width="200" height="100"/>
+                                                    </collectionViewFlowLayout>
+                                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </collectionView>
+                                            </subviews>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xa4-EN-mSd">
+                                            <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="tMb-sz-iqO">
+                                            <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="84O-Xt-Yl9"/>
@@ -843,6 +860,9 @@
                         <viewLayoutGuide key="safeArea" id="10a-cx-QBD"/>
                         <viewLayoutGuide key="layoutMargins" id="oBB-Y7-SRp"/>
                     </view>
+                    <connections>
+                        <outlet property="colViewMain" destination="tGK-g9-FBJ" id="N55-V8-U94"/>
+                    </connections>
                 </viewController>
                 <customObject id="Y6J-Z6-1er" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

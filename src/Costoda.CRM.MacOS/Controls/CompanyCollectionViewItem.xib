@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="CompanyCollectionViewItem" id="kZm-0c-4Vq" customClass="CompanyColViewItem">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Cc-2B-Wnv">
+                    <rect key="frame" x="16" y="0.0" width="448" height="81"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fGV-vT-ztK">
+                            <rect key="frame" x="-2" y="50" width="185" height="31"/>
+                            <textFieldCell key="cell" selectable="YES" title="Company Name" id="Cma-pY-mFc">
+                                <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-Az-TjJ">
+                            <rect key="frame" x="-2" y="25" width="82" height="21"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="City, State" id="Fxr-9u-JTO">
+                                <font key="font" textStyle="title2" name=".SFNS-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-bB-EyH">
+                            <rect key="frame" x="-2" y="0.0" width="65" height="21"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Country" id="WJD-C9-Ffq">
+                                <font key="font" textStyle="title2" name=".SFNS-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5Cc-2B-Wnv" firstAttribute="top" secondItem="kZm-0c-4Vq" secondAttribute="top" id="J1e-NN-g39"/>
+                <constraint firstItem="5Cc-2B-Wnv" firstAttribute="leading" secondItem="kZm-0c-4Vq" secondAttribute="leading" constant="16" id="aTX-aH-LWg"/>
+                <constraint firstAttribute="trailing" secondItem="5Cc-2B-Wnv" secondAttribute="trailing" constant="16" id="i6n-kC-uER"/>
+                <constraint firstAttribute="bottom" secondItem="5Cc-2B-Wnv" secondAttribute="bottom" id="nuR-Xm-kHq"/>
+            </constraints>
+            <connections>
+                <outlet property="lblCityState" destination="8eC-Az-TjJ" id="WGv-MW-WsE"/>
+                <outlet property="lblCompany" destination="fGV-vT-ztK" id="24u-L0-nhG"/>
+                <outlet property="lblCountry" destination="N5N-bB-EyH" id="sUc-7V-i3h"/>
+            </connections>
+            <point key="canvasLocation" x="21" y="149"/>
+        </customView>
+    </objects>
+</document>

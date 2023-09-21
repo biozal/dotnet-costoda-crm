@@ -22,7 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Controls\" />
     <Folder Include="WindowControllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -50,8 +49,13 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="WindowControllers\AuthenticationWindowController.designer.cs">
       <DependentUpon>AuthenticationWindowController.cs</DependentUpon>
     </Compile>
+        <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Controls\CompanyCollectionViewItem.designer.cs">
+      <DependentUpon>CompanyCollectionViewItem.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Remove="ViewControllers\MainSplitViewController.xib" />
+    <InterfaceDefinition Update="CompanyCollectionViewItem.xib">
+      <Link>Controls\CompanyCollectionViewItem.xib</Link>
+    </InterfaceDefinition>
   </ItemGroup>
 </Project>
